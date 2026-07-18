@@ -1,4 +1,4 @@
-import CustomerDetail from "@/components/customers/CustomerDetail";
+import CustomerEditPage from "@/components/customers/CustomerEditPage";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -6,5 +6,5 @@ interface Props {
 
 export default async function Page({ params }: Props) {
   const { id } = await params;
-  return <CustomerDetail customerId={id} />;
+  return <CustomerEditPage customerId={id} />;
 }
