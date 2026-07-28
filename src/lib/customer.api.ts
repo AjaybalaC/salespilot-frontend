@@ -83,3 +83,12 @@ export const customerApi = {
     return data.data.customers;
   },
 };
+
+export const getCurrentUserId = async (): Promise<string> => {
+  const res = await fetch(`${BASE_URL}/auth/me`, {
+    headers: getHeaders(),
+    credentials: "include",
+  });
+  const data = await res.json();
+  return data.data.user._id;
+};

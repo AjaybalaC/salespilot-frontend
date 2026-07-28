@@ -1,4 +1,4 @@
-import LeadDetail from "@/components/leads/LeadDetail";
+import LeadEditPage from "@/components/leads/LeadEditPage";
  
 interface Props {
   params: Promise<{ id: string }>;
@@ -6,5 +6,5 @@ interface Props {
  
 export default async function Page({ params }: Props) {
   const { id } = await params;
-  return <LeadDetail leadId={id} />;
+  return <LeadEditPage leadId={id} />;
 }
